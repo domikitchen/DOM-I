@@ -47,6 +47,15 @@ const navBar = document.getElementsByTagName('nav');
 
 const navBtns = document.querySelectorAll('nav a');
 
+navBtns.forEach(btns => {
+  btns.style.color = 'green';
+});
+
+let newBtn = document.createElement("a");
+newBtn.textContent = "Thing";
+navBar[0].appendChild(newBtn);
+
+navBar[0].prepend("Thing");
 
 navBtns[0].textContent = "Services";
 navBtns[1].textContent = "Product";
@@ -54,6 +63,7 @@ navBtns[2].textContent = "Vision";
 navBtns[3].textContent = "Features";
 navBtns[4].textContent = "About";
 navBtns[5].textContent = "Contact";
+
 
 const cta = document.querySelector('div.cta-text');
 
